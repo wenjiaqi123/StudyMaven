@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <!--
+        数据库规范命名是每个单词下划线分割，例：user_name
+        Java里属性命名规范驼峰，例：userName
+        mapUnderscoreToCamelCase 可以自动将把【下划线和后一个字母】映射成【大写字母】
+        user_name  →  userName
+        -->
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <!--配置别名，mapper文件中就可以直接使用类名-->
+    <typeAliases>
+        <package name="com.gsm.model"/>
+        <package name="com.gsm.po"/>
+        <package name="com.gsm.vo"/>
+    </typeAliases>
+
+    <mappers>
+    </mappers>
+</configuration>
